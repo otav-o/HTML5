@@ -1,0 +1,12 @@
+@charset "UTF-8";
+body {
+    background-image: url("_imagens/lampada-quebrada.jpg");
+    background-color: greenyellow;
+    color: rgba(0, 0, 0, 1);
+
+    
+}
+p {
+    text-align: justify;
+    text-indent: 50px;
+}
