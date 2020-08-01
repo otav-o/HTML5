@@ -1,7 +1,6 @@
 @charset "UTF-8";
 body {
-    background-image: url("_imagens/lampada-quebrada.jpg");
-    background-color: greenyellow;
+    background-color: white;
     color: rgba(0, 0, 0, 1);
 
     
@@ -9,4 +8,24 @@ body {
 p {
     text-align: justify;
     text-indent: 50px;
+
+}
+
+/* Formatação das legendas das imagens */
+figure.foto-legenda {
+    position: relative;
+    border: 8px solid white;
+    box-shadow: 1px 1px 4px black;
+}
+figure.foto-legenda img {
+    width: 100%;    /*largura. Imagem passa a ocupar todo o espaço da borda*/
+    height: 100%;      /*altura*/
+}
+figure.foto-legenda figcaption {
+    position: absolute;     /*Só é absoluto em relação ao pai se este for relativo ao documento*/
+    top: 0px;
+    background-color: rgba(0, 0, 0, 0.25);
+    color: rgb(255, 255, 255);
+    width: 100%;    /*legenda passa a ocupar todo o espaço da borda*/
+    height: 100%;
 }
