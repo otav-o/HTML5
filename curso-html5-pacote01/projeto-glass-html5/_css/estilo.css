@@ -22,10 +22,16 @@ figure.foto-legenda img {
     height: 100%;      /*altura*/
 }
 figure.foto-legenda figcaption {
+    opacity: 0;
     position: absolute;     /*Só é absoluto em relação ao pai se este for relativo ao documento*/
     top: 0px;
     background-color: rgba(0, 0, 0, 0.25);
     color: rgb(255, 255, 255);
     width: 100%;    /*legenda passa a ocupar todo o espaço da borda*/
     height: 100%;
+    padding: 100px; /*aumenta o tamanho, mas extravasa a borda*/
+    box-sizing: border-box; /*cria um box dentro da borda (resolve o problema causado pelo padding*/
+
 }
+
+figure.foto-legenda figcaption {} 
