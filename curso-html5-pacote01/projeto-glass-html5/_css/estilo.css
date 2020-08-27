@@ -13,25 +13,31 @@ p {
 
 /* Formatação das legendas das imagens */
 figure.foto-legenda {
-    position: relative;
+    position: relative; /*relativo ao código html; para os filhos serem absolutos*/
     border: 8px solid white;
-    box-shadow: 1px 1px 4px black;
+    box-shadow: 1px -2px 4px black; /*horizontal, vertical, difusão*/
 }
-figure.foto-legenda img {
+figure.foto-legenda img { /* formatar tudo que for img */
+    
     width: 100%;    /*largura. Imagem passa a ocupar todo o espaço da borda*/
     height: 100%;      /*altura*/
+
 }
 figure.foto-legenda figcaption {
     opacity: 0;
-    position: absolute;     /*Só é absoluto em relação ao pai se este for relativo ao documento*/
+    position: absolute;     /*Só é absoluto em relação ao pai se este for relativo ao documento. Absoluta dentro do container (a borda branca) */
     top: 0px;
-    background-color: rgba(0, 0, 0, 0.25);
+    background-color: rgba(0, 0, 0, 0.25); /*para a legenda branca ficar num fundo meio cinza*/
     color: rgb(255, 255, 255);
-    width: 100%;    /*legenda passa a ocupar todo o espaço da borda*/
+    width: 100%;    /*legenda e seu fundo passam a ocupar todo o espaço da borda*/
     height: 100%;
-    padding: 100px; /*aumenta o tamanho, mas extravasa a borda*/
+    padding: 100px; /*aumenta o tamanho e desloca para baixo, mas extravasa a borda*/
     box-sizing: border-box; /*cria um box dentro da borda (resolve o problema causado pelo padding*/
 
+
+    transition: opacity 1s;
 }
 
-figure.foto-legenda figcaption {} 
+figure.foto-legenda:hover figcaption {
+    opacity: 1;
+} 
