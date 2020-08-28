@@ -1,14 +1,33 @@
 @charset "UTF-8";
 body {
-    background-color: white;
+    background-color: #dddddd;	/*cinza*/
     color: rgba(0, 0, 0, 1);
-
-    
+    position: absolute;
+  
 }
+div#interface {
+    width: 1000px;
+    background-color: #ffffff; 	/*white*/
+    /*margin: 100px 10px 10px 10px; cima direita baixo esquerda (sentido horário). Área externa ao objeto*/
+    margin: -20px auto 0px auto;	/*não entendi por que o 'auto' centraliza uai pq sim!*/
+    box-shadow: 2px 1px 1px rgba(0,0,0,0.3);	/*horizontal, vertical, espalhamento, cor [da sombra] */
+					/*negativo: esquerda e cima. positivo: direita e baixo*/
+    padding: 10px 10px 10px 10px;	/*padding: espaço interno do objeto. Mesmos parâmetros do margin: cima, direita, baixo, esquerda se os 4 valores forem iguais, basta escrever uma vez.*/
+    position: relative;
+}
+
 p {
     text-align: justify;
     text-indent: 50px;
+    
 
+}
+
+header#cabecalho img#oculosPreto {	/*tem que especificar todos os ids?*/
+    position: absolute;		/*em relação à posição original*/
+    left: 0px;
+    top: 0px;
+    
 }
 
 /* Formatação das legendas das imagens */
@@ -38,15 +57,14 @@ figure.foto-legenda figcaption {
     transition: opacity 1s;
 }
 
-figure.foto-legenda:hover figcaption {
+figure.foto-legenda:hover figcaption {	/*efeito que vai ser aplicado quando passar o mouse encima*/
     opacity: 1;
 } 
 
 /*FORMATAÇÃO DO MENU*/
 nav#menu {
     display: block;
-     
-    
+   
     
 }
 
@@ -56,7 +74,7 @@ nav#menu ul{    /*nas listas não ordenadas*/
     text-transform: uppercase;
     top: 0px;   /*0px não é no limite da página, há uma margem. Números negativos resolvem*/
     right: 0px; /*distância do lado direito*/
-                    /*top e left só são possíveis pois o menu ul é absoluto*/
+                    
 }
 
 nav#menu li {
@@ -64,9 +82,28 @@ nav#menu li {
     background-color: #dddddd;
     padding: 10px; /*padding define a distância de um elemento até suas bordas. Evita ter que configurar todos os lados. Muito mais informações na documentação*/
     margin: 2px; /*espaço externo, além das bordas. Lembrar que é duplicado se aplicado a elementos próximos*/
+    transition: background-color 1s;	/*vai monitorar o bg color e aplicar 1 segundo de transição*/
+
+
+	color: blue;
 }
 
+nav#menu li:hover {
+    background-color: #606060;	/*muda só o bg color, mantém o resto*/
+    
+    
+}
 nav#menu h1 {
     /*sumir com ele pois não há necessidade visual, mas é importante para os mecanismos de busca*/
     display: none;
+}
+
+nav#menu a {	/*todos os links (âncora)*/
+    color: #000000;	/*não entendo por que o color entra aqui, e não em nav#menu li*/
+    text-decoration: none;	/*tira o sublinhado*/
+}
+
+nav#menu a:hover {
+    color: #ffffff; 	/*white*/
+    text-transform: lowercase;	/*apenas para testar*/
 }
