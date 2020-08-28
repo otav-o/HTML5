@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang='pt-br'>
+    <head>
+        <meta charset='utf-8'>
+        <title>Position absolute</title>
+        <style>
+		.elementExample {	/*impacta todas as divs, menos a interna*/
+			width: 200px;	/*largura*/
+			height: 200px;
+			line-height: 200px;	/*posição do texto. Se for a mesma altura do elemento, centraliza verticalmente*/
+			color: #FFF;	/*branco. Essa e as duas de baixo impactam a fonte*/
+			text-transform: uppercase;
+			text-align: center; /*centraliza horizontalmente dentro da caixa*/
+			cursor: pointer; /*mãozinha do mouse em toda a caixa*/
+			
+		/*Os estilos acima interferem em todo o resto.
+		Foi definido um quadrado*/
+		}
+		.elementExample_first {	/*primeiro quadrado*/
+			background-color: #6c5ce7;
+			position: absolute;
+			right: 0px;
+			
+			opacity: 0.5;
+		}
+		.elementExample_second {
+			background-color: #00b894;
+			position: absolute;
+			left: 50%; /*problema: oq está alinhado no meio não é
+			o centro do elemento, e sim seu lado esquerdo*/
+			top: 50%; /*aqui também, o que está alinhado é o topo
+			o css estabelece a distância do lado mais próximo*/
+			transform: translateX(-50%) translateY(-50%);;	/*corrige esse problema.
+			transform funciona um pouco diferente do position absolute,
+			os 50% são em relação ao objeto. Valores negativos para a 
+			esquerda e para cima. Não pode escrever dois transform,
+			ponha tudo na mesma linha
+			
+			Outra forma:
+			transform: translate(-50%, -50%);*/
+			
+			
+		}
+		.elementExample_third {
+			background-color: #d63031;
+			position: absolute;
+		}
+		.elementExample-internal {
+			width: 100px;	/*metade das dimensões do pai*/
+			height: 100px;
+			line-height: 100px;
+			background-color: #00cec9;
+		/*como este quadrado está dentro do third (observe o código),
+		ele está dentro dos limites dele*/
+			position: absolute; /*lembre-se: absoluto em relação à página, desrespeita
+			o pai. Para resolver isso, deve-se mudar a posição do pai para qualquer coisa
+			que não seja static (padrão)*/
+			right: 50%;
+			top: 50%;
+			transform: translate(50%, -50%); /*direita, cima*/
+		}
+		
+        </style>
+    </head>
+    <body>
+        <div class="elementExample elementExample_first">
+            Apenas uma div
+        </div>
+
+        <div class="elementExample elementExample_second">
+			Apenas outra div
+		</div>
+		
+		<div class="elementExample elementExample_third">
+			<div class="elementExample-internal">Interna</div>
+		</div>
+	</body>
+</html>
+		
