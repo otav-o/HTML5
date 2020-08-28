@@ -41,3 +41,32 @@ figure.foto-legenda figcaption {
 figure.foto-legenda:hover figcaption {
     opacity: 1;
 } 
+
+/*FORMATAÇÃO DO MENU*/
+nav#menu {
+    display: block;
+     
+    
+    
+}
+
+nav#menu ul{    /*nas listas não ordenadas*/
+    position: absolute; /*posição relativa: fica preso no container; absoluta: livre pelo site*/
+    list-style: none;   /*sumir com os símbolos (pq não usa type?)*/
+    text-transform: uppercase;
+    top: 0px;   /*0px não é no limite da página, há uma margem. Números negativos resolvem*/
+    right: 0px; /*distância do lado direito*/
+                    /*top e left só são possíveis pois o menu ul é absoluto*/
+}
+
+nav#menu li {
+    display: inline-block; /*Faz com que sejam dispostos na mesma linha*/
+    background-color: #dddddd;
+    padding: 10px; /*padding define a distância de um elemento até suas bordas. Evita ter que configurar todos os lados. Muito mais informações na documentação*/
+    margin: 2px; /*espaço externo, além das bordas. Lembrar que é duplicado se aplicado a elementos próximos*/
+}
+
+nav#menu h1 {
+    /*sumir com ele pois não há necessidade visual, mas é importante para os mecanismos de busca*/
+    display: none;
+}
