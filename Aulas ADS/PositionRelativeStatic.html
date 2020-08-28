@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<!-- obs.: o JS não funciona -->
+<html lang='pt-br'>
+	<head>
+		<meta charset='utf-8'>
+		<title>Position: static e relative</title>
+		
+		<style>
+			.elementExample {
+				width: 200px;
+				height: 200px;
+				line-height: 200px;
+				color: #FFF;
+				text-transform: uppercase;
+				text-align: center;
+				cursor: pointer;
+			}
+
+			.elementExample_first {
+				background-color: #8E44AD; /*roxo*/
+				position: relative; /*a partir da posição onde o elemento foi criado. Não fica flutuando, não abre espaço*/
+				top: 200px; /*não é a partir do topo da página, e sim da posição inicial*/
+			}
+
+			.elementExample_last {
+				background-color: #C0392B; /*vermelho*/
+				position: relative;
+				
+			}
+
+			.elementExample_isActive {
+				z-index: 1; /*quanto maior o número, mais a frente está (eixo z). Só funciona se o position NÃO for static*/
+				/*quem estiver com essa classe, terá o z-index: 1*/
+			}
+				
+		</style>
+
+
+	</head>
+
+		
+	<body>
+		<div class="elementExample elementExample_first">
+			Apenas uma div
+		</div>
+
+		<div class='elementExample elementExample_last'>
+			Apenas outra div.
+		</div>
+	<!-- têm a mesma classe e uma outra para diferenciar-->
+
+
+		<script>
+			const $elementExampleFirst = document.querySelector('.elementExample_first')	/*coloca o elemento em uma constante*/
+			const $elementExampleLast = document.quetySelector(".elementExample_last')
+
+			$elementExampleFirst.addEventListener('click', function(event) {		/*adiciona o evento de um clique, que executa a função*/
+				this.ClassList.toggle('elementExample_isActive')			/*this: este elemento; toggle: adiciona ou remove a classe*/
+				$elementExampleLast.classList.add('elementExample_isActive')
+			})
+
+			$elementExampleLast.addEventListener('click', function(event) {
+				this.classList.toggle('elementExample_isActive')			/*classe criada: elementExample_isActive. Ver CSS*/
+				$elementExampleFist.classList.add('elementExample_isActive')})
+
+		</script>
+	</body>
+</html>
