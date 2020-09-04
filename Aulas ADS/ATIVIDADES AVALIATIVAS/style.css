@@ -1,0 +1,61 @@
+body {
+	background: #e1e1e1;
+}
+h1 {
+	text-align: center;
+	/*font-size: 7; não funciona. Usei a tag <font size=7>*/
+	font-family: calibri;
+	color: navy;
+}
+
+h3 {
+	font-family: calibri;
+	color: navy;
+}
+
+/*#regua-1 {
+	border: 2px solid navy; 
+	width: 20%;
+	position: relative;
+	left: -530px;
+	
+}
+
+hr[id=regua-2] {
+	border: 2px solid navy;
+	width: 41%;
+	position: relative;
+	left: -390em;
+	
+}		NÃO ROLOU*/
+
+p {
+	text-align: justify;
+	font-family: 'verdana'; /*OBS.1: segui as instruções, mas ficou diferente do site da foto. OBS.2: Ambiguidade: "parágrafos" significa todos ou somente os da lista? Apliquei a todos.*/
+	color: black;
+	/*font-size: 4; ~consertar*/
+
+}
+
+.paragrafo {
+	text-indent: 30px;
+}
+
+
+
+
+
+ol > li {	/*filhos diretos, mas não os netos*/
+	font-weight: 900;
+	color: navy;
+	font-family: 'calibri';
+	font-size: ;
+}
+
+#rodape {
+	font-size: small;
+	text-decoration: italic;
+	
+}
+
+
