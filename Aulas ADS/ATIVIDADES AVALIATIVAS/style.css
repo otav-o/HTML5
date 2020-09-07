@@ -13,21 +13,19 @@ h3 {
 	color: navy;
 }
 
-/*#regua-1 {
+#regua-1 {
 	border: 2px solid navy; 
-	width: 20%;
-	position: relative;
-	left: -530px;
+	width: 270px;
+	margin-left: 0;
 	
 }
 
 hr[id=regua-2] {
 	border: 2px solid navy;
-	width: 41%;
-	position: relative;
-	left: -390em;
+	width: 545px;
+	margin-left: 0;		/*podia ter criado uma classe comum*/
 	
-}		NÃO ROLOU*/
+}		
 
 p {
 	text-align: justify;
