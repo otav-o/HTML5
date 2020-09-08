@@ -3,57 +3,42 @@ body {
 }
 h1 {
 	text-align: center;
-	/*font-size: 7; não funciona. Usei a tag <font size=7>*/
 	font-family: calibri;
 	color: navy;
+	font-size: 48px;
 }
-
 h3 {
 	font-family: calibri;
 	color: navy;
+	font-size: 24px;
 }
-
-#regua-1 {
-	border: 2px solid navy; 
-	width: 270px;
-	margin-left: 0;
-	
-}
-
-hr[id=regua-2] {
+.regua {
 	border: 2px solid navy;
-	width: 545px;
-	margin-left: 0;		/*podia ter criado uma classe comum*/
-	
+	margin-left: 0;
+}
+#regua-1 {
+	width: 350px;
+}
+hr[id=regua-2] {
+	width: 705px;	
 }		
-
 p {
 	text-align: justify;
-	font-family: 'verdana'; /*OBS.1: segui as instruções, mas ficou diferente do site da foto. OBS.2: Ambiguidade: "parágrafos" significa todos ou somente os da lista? Apliquei a todos.*/
+	font-family: verdana; 
 	color: black;
-	/*font-size: 4; ~consertar*/
-
+	font-size: 18px;	/*= tamanho 4*/
+	font-weight: 400;
 }
-
 .paragrafo {
 	text-indent: 30px;
 }
-
-
-
-
-
-ol > li {	/*filhos diretos, mas não os netos*/
+li {	
 	font-weight: 900;
 	color: navy;
 	font-family: 'calibri';
-	font-size: ;
+	font-size: 24px; /*o mesmo que tamanho 5*/
 }
-
 #rodape {
 	font-size: small;
-	text-decoration: italic;
-	
+	font-style: italic;
 }
-
-
