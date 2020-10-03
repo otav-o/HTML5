@@ -1,0 +1,15 @@
+PÁGINA PRINCIPAL
+	Os erros mostrados no validador ocorreram pois não foi usado CSS. <font> é uma tag descontinuada, <p> não pode ser filho de font, <font align="justify"> também não pode. Atributo bgcolor no elemento body também está obsoleto, assim como o type no <ul>, e a tag <center>
+
+COMO FUNCIONA HOJE
+	Além dos mesmos erros da página principal, o atributo size do <hr> está obsoleto, devendo-se usar CSS. Outra reclamação foi o uso de porcentagem no width, mas não entendi o motivo, já que deixar o elemento dinâmico permite visualização uniforme em diferentes telas.
+
+COMO CADASTRAR
+	Size, color e width não devem mais ser atributos de <hr>, devendo-se usar CSS. Também houve problema com width no iframe (tanto com porcentagens, quanto com pixels), mas não vejo como colocar somente os números (sem as unidades) pode ser útil.
+_________________
+
+Erros que foram úteis e eu corrigi: 
+
+	1. Havia esquecido de colocar ponto e vírgula ; após o &nbsp. O interessante é que o HTML aplicou o espaçamento do mesmo jeito, por isso não percebi.
+	2. Também não tinha colocado o texto alternativo em algumas das imagens
+	3. Tinha colocado a tag <br> como </br> e, apesar de não fazer diferença, o validador não gostou.
