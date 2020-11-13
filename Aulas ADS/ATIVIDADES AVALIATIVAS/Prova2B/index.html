@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+
+</head>
+<body>
+    <!-- definir a tabela, alinhada ao centro, ocupando 60% da largura, com 25% de altura (na verdade é espaçamento entre conteúdo e exterior) por padrão -->
+    <table align=center border=0 width=60% cellpadding='25%' cellspacing=0>
+
+        <!-- tag tr define uma linha; td uma coluna -->
+        <tr bgcolor=gray>
+            <!-- colspan mescla colunas e deixa como uma só na linha -->
+            <td colspan=3></td>
+        </tr>
+        
+        <!-- colgroup serve para formatar as colunas na ordem que aparecerem -->
+        <colgroup>
+            <col width=20%> <!-- refere-se à próxima coluna definida do código -->
+            <col width=60%> <!-- refere-se à segunda -->
+        </colgroup>
+
+        <!-- esta linha tem uma altura de 300 -->
+        <tr height='300'>
+            <!-- cada uma de suas colunas tem uma cor de fundo -->
+            <td bgcolor=blue>  </td> <!-- aqui é aplicado o <col width=20%> -->
+            <td bgcolor=green> </td> 
+            <td bgcolor=yellow>  </td>
+
+        </tr>
+
+        <!-- última linha da tabela. Junta 3 colunas e tem fundo vermelho -->
+        <tr bgcolor=red>
+            <td colspan=3>  </td>
+        </tr>
+    </table>
+
+</body>
+</html>
