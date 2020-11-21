@@ -1,0 +1,6 @@
+As páginas que possuem um comentário <!-- FEITO --> no topo não precisam ser mexidas, pois já fiz e revisei (alinhamento do parágrafo, fonte, foto, etc.)
+
+1. Você só precisa arrumar a página elenco.html, as fotos estão ultrapassando o limite das tabelas
+
+2. Se vc conseguir, pode tirar o scrolling do frame logo (eu não sei como faz)
+
